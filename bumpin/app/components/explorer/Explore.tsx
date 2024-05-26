@@ -23,6 +23,14 @@ const exploreData = [
       imageUrl: "/house3.png",
       tag: "mountain"
     },
+    {
+        id: 4,
+        title: "House 4",
+        distance: "2000 km",
+        city: "Marocco",
+        imageUrl: "/house5.png",
+        tag: "beach"
+      },
   ];
   
   export default exploreData;

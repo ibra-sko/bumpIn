@@ -1,4 +1,6 @@
 import Image from "next/image";
+import favoriteData from "../components/favorite/Favorite"
+import reservedData from "../components/reserved/Reserved";
 
 export default function Profile() {
   return (
@@ -14,21 +16,21 @@ export default function Profile() {
         <div className="mb-6">
           <h3 className="text-lg font-bold mb-2">Reserved Houses</h3>
           <div className="flex space-x-2 overflow-x-scroll">
-            {[1, 2, 3, 4, 5].map((item) => (
+          {reservedData.map((house) => (
               <div
-                key={item}
+                key={house.id}
                 className="flex-shrink-0 w-48 bg-white rounded-lg shadow-md"
               >
                 <Image
-                  src="/house1.png"
-                  alt="Reserved House"
+                  src={house.imageUrl}
+                  alt={house.title}
                   width={192}
                   height={108}
                   className="w-full h-32 rounded-t-lg"
                 />
                 <div className="p-2">
-                  <h4 className="text-sm font-semibold">Reserved House</h4>
-                  <p className="text-xs text-gray-500">10 km | BeachPlage</p>
+                  <h4 className="text-sm font-semibold">{house.title}</h4>
+                  <p className="text-xs text-gray-500">{house.distance} | {house.city}</p>
                 </div>
               </div>
             ))}
@@ -39,21 +41,21 @@ export default function Profile() {
         <div className="mb-6">
           <h3 className="text-lg font-bold mb-2">Favorite Houses</h3>
           <div className="flex space-x-2 overflow-x-scroll">
-            {[1, 2, 3, 5, 6, 7, 8].map((item) => (
+          {favoriteData.map((house) => (
               <div
-                key={item}
+                key={house.id}
                 className="flex-shrink-0 w-48 bg-white rounded-lg shadow-md"
               >
                 <Image
-                  src="/house2.png"
-                  alt="Favorite House"
+                  src={house.imageUrl}
+                  alt={house.title}
                   width={192}
                   height={108}
                   className="w-full h-32 rounded-t-lg"
                 />
                 <div className="p-2">
-                  <h4 className="text-sm font-semibold">Favorite House</h4>
-                  <p className="text-xs text-gray-500">12 km | Mulhouse</p>
+                  <h4 className="text-sm font-semibold">{house.title}</h4>
+                  <p className="text-xs text-gray-500">{house.distance} | {house.city}</p>
                 </div>
               </div>
             ))}
