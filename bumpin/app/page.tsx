@@ -1,4 +1,5 @@
 import Image from "next/image";
+import exploreData from "./components/explorer/Explore";
 
 export default function Home() {
   return (
@@ -27,21 +28,21 @@ export default function Home() {
         <div>
           <h3 className="text-lg font-bold mb-2">Explore Cities</h3>
           <div className="flex space-x-2 overflow-x-scroll">
-            {[1, 2, 3, 4, 5, 6, 7].map((item) => (
+            {exploreData.map((house) => (
               <div
-                key={item}
+                key={house.id}
                 className="flex-shrink-0 w-48 bg-white rounded-lg shadow-md"
               >
                 <Image
-                  src="/house.jpg"
-                  alt="Modern House"
+                  src={house.imageUrl}
+                  alt={house.title}
                   width={192}
                   height={108}
                   className="w-full h-32 rounded-t-lg"
                 />
                 <div className="p-2">
-                  <h4 className="text-sm font-semibold">Modern House</h4>
-                  <p className="text-xs text-gray-500">8 km | Rome</p>
+                  <h4 className="text-sm font-semibold">{house.title}</h4>
+                  <p className="text-xs text-gray-500">{house.distance} | {house.city}</p>
                 </div>
               </div>
             ))}
