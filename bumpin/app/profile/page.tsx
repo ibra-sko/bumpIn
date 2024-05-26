@@ -14,13 +14,13 @@ export default function Profile() {
         <div className="mb-6">
           <h3 className="text-lg font-bold mb-2">Reserved Houses</h3>
           <div className="flex space-x-2 overflow-x-scroll">
-            {[1, 2, 3].map((item) => (
+            {[1, 2, 3, 4, 5].map((item) => (
               <div
                 key={item}
                 className="flex-shrink-0 w-48 bg-white rounded-lg shadow-md"
               >
                 <Image
-                  src="/house.jpg"
+                  src="/house1.png"
                   alt="Reserved House"
                   width={192}
                   height={108}
@@ -28,7 +28,7 @@ export default function Profile() {
                 />
                 <div className="p-2">
                   <h4 className="text-sm font-semibold">Reserved House</h4>
-                  <p className="text-xs text-gray-500">10 km</p>
+                  <p className="text-xs text-gray-500">10 km | BeachPlage</p>
                 </div>
               </div>
             ))}
@@ -39,13 +39,13 @@ export default function Profile() {
         <div className="mb-6">
           <h3 className="text-lg font-bold mb-2">Favorite Houses</h3>
           <div className="flex space-x-2 overflow-x-scroll">
-            {[1, 2, 3].map((item) => (
+            {[1, 2, 3, 5, 6, 7, 8].map((item) => (
               <div
                 key={item}
                 className="flex-shrink-0 w-48 bg-white rounded-lg shadow-md"
               >
                 <Image
-                  src="/house.jpg"
+                  src="/house2.png"
                   alt="Favorite House"
                   width={192}
                   height={108}
@@ -53,7 +53,7 @@ export default function Profile() {
                 />
                 <div className="p-2">
                   <h4 className="text-sm font-semibold">Favorite House</h4>
-                  <p className="text-xs text-gray-500">12 km</p>
+                  <p className="text-xs text-gray-500">12 km | Mulhouse</p>
                 </div>
               </div>
             ))}
