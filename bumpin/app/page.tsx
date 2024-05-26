@@ -27,7 +27,7 @@ export default function Home() {
         <div>
           <h3 className="text-lg font-bold mb-2">Explore Cities</h3>
           <div className="flex space-x-2 overflow-x-scroll">
-            {[1, 2, 3].map((item) => (
+            {[1, 2, 3, 4, 5, 6, 7].map((item) => (
               <div
                 key={item}
                 className="flex-shrink-0 w-48 bg-white rounded-lg shadow-md"
@@ -41,7 +41,7 @@ export default function Home() {
                 />
                 <div className="p-2">
                   <h4 className="text-sm font-semibold">Modern House</h4>
-                  <p className="text-xs text-gray-500">8 km</p>
+                  <p className="text-xs text-gray-500">8 km | Rome</p>
                 </div>
               </div>
             ))}
