@@ -14,9 +14,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center p-4 bg-gray-100">
-      {/* Header Section */}
       <div className="w-full max-w-5xl bg-white p-6 rounded-lg shadow-md">
-        {/* Logo and Title */}
         <div className="flex items-center justify-between mb-4">
           <span>
             <h1 className="text-2xl">Where do</h1>
@@ -25,7 +23,6 @@ export default function Home() {
           <Image src="/logo.png" alt="Logo" width={48} height={48} />
         </div>
 
-        {/* Search Section */}
         <div className="relative mb-6">
           <input
             type="text"
@@ -34,7 +31,6 @@ export default function Home() {
           />
         </div>
 
-        {/* Explore Cities */}
         <div>
           <h3 className="text-lg font-bold mb-2">Explore Cities</h3>
           <div className="flex space-x-2 overflow-x-scroll">
@@ -58,7 +54,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Categories */}
         <div className="mt-6 text-center">
           <h3 className="text-lg font-semibold mb-2">Categories</h3>
           <div className="flex justify-center space-x-4">
@@ -95,7 +90,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* All */}
         <div className="mt-6 text-center">
           <div
             className="flex flex-col items-center cursor-pointer"
